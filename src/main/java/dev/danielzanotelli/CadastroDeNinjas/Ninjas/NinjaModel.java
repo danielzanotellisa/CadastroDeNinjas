@@ -1,7 +1,7 @@
-package dev.danielzanotelli.CadastroDeNinjas;
+package dev.danielzanotelli.CadastroDeNinjas.Ninjas;
 
+import dev.danielzanotelli.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +16,11 @@ public class NinjaModel {
     private String nome;
     private String email;
     private Integer idade;
+
+    //Muitos ninjas tem somente uma missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") //Nossa chave estrangeira
+    private MissoesModel missao;
 
     public NinjaModel() {
     }
