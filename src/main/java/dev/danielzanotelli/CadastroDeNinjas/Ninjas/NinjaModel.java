@@ -2,12 +2,16 @@ package dev.danielzanotelli.CadastroDeNinjas.Ninjas;
 
 import dev.danielzanotelli.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "tb_cadastro")
 public class NinjaModel {
     @Id
@@ -21,13 +25,4 @@ public class NinjaModel {
     @ManyToOne
     @JoinColumn(name = "missoes_id") //Nossa chave estrangeira
     private MissoesModel missao;
-
-    public NinjaModel() {
-    }
-
-    public NinjaModel(String nome, String email, int idade) {
-        this.nome = nome;
-        this.email = email;
-        this.idade = idade;
-    }
 }
