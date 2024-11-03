@@ -19,6 +19,7 @@ target/
 *.iml
 *.ipr
 .DS_STORE
+/.env
 
 ### NetBeans ###
 /nbproject/private/
@@ -32,3 +33,5 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
