@@ -3,6 +3,7 @@ package dev.danielzanotelli.CadastroDeNinjas.Missoes;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MissoesService {
@@ -22,5 +23,11 @@ public class MissoesService {
 
     public MissoesModel criarMissao(MissoesModel missao) {
         return missoesRepository.save(missao);
+    }
+
+    //deletar missao
+
+    public void deletarMissao(Long id){
+        missoesRepository.deleteById(id);
     }
 }
