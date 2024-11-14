@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@ToString
 @Table (name = "tb_missoes")
 public class MissoesModel {
     @Id
